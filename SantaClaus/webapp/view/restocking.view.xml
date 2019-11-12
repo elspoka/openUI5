@@ -1,0 +1,44 @@
+<mvc:View
+	controllerName="sap.ui.santaclaus.controller.restocking"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="{i18n>detailPageTitle}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<ObjectHeader
+			title="Restocking"/>
+	<List
+	  id="supplierList"
+      headerText="{i18n>supplierListTitle}"
+      class="sapUiResponsiveMargin"
+      width="auto"
+      
+      items="{
+         path : 'suppliers>/Suppliers',
+         sorter : {
+            path : 'Name',
+				group : false 
+         }
+      }">
+      <headerToolbar>
+	         <Toolbar>
+	            <Title text="{i18n>supplierListTitle}" />
+	            <ToolbarSpacer/>
+	            <SearchField width="50%" search="onFilterInvoices" />
+	         </Toolbar>
+	      </headerToolbar>
+      <items>
+          
+         
+         <ObjectListItem
+            type="Active"
+            title="{suppliers>Name}"
+            press="onPress"
+            />
+      </items>
+   </List>
+	</Page>
+	
+	
+</mvc:View>

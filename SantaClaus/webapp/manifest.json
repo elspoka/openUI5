@@ -1,0 +1,157 @@
+{
+  "_version": "1.0.0",
+  "sap.app": {
+    "_version": "1.0.0",
+    "id": "sap.ui.santaclaus",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "santaclaus",
+    "description": "",
+    "dataSources": {
+      
+    }
+  },
+  "sap.ui": {
+    "_version": "1.0.0",
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_hcb",
+      "sap_bluecrystal",
+      "sap_belize"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.0.0",
+    "rootView": "sap.ui.santaclaus.view.App",
+    "config": {
+      "fullWidth": true
+    },
+    "dependencies": {
+      "minUI5Version": "1.30.0",
+      "libs": {
+        "sap.ui.core": {
+        },
+        "sap.m": {
+        },
+        "sap.ui.layout": {
+        }
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "sap.ui.santaclaus.i18n.i18n"
+        }
+      },
+	  "products": {
+		"type": "sap.ui.model.json.JSONModel",
+		"uri": "https://api.backendless.com/2CF53ABC-39A6-B0FE-FFCF-D90B34DC5E00/B508D603-A943-E97E-FF7E-936F9CBF7B00/data/Products"
+	  },
+	  "suppliers": {
+		"type": "sap.ui.model.json.JSONModel",
+		"uri": "https://p5ld5.mocklab.io/suppliersList"
+	  }
+    },
+	"routing": {
+	  "config": {
+		"routerClass": "sap.m.routing.Router",
+		"viewType": "XML",
+		"viewPath": "sap.ui.santaclaus.view",
+		"controlId": "app",
+		"controlAggregation": "pages",
+		"transition": "slide",
+		"async": true
+	  },
+	  "routes": [
+		{
+		  "pattern": "",
+		  "name": "overview",
+		  "target": "overview"
+		},
+		
+		{
+		  "pattern": "productdetails/{productPath}",
+		  "name": "productdetails",
+		  "target": "productdetails"
+	},
+		{
+		  "pattern": "supplierdetails/{supplierPath}",
+		  "name": "supplierdetails",
+		  "target": "supplierdetails",
+		  "targetControl": "app"
+		  },
+		{
+		  "pattern": "products",
+		  "name": "products",
+		  "target": "products"
+		},
+		{
+		  "pattern": "restocking",
+		  "name": "restocking",
+		  "target": "restocking"
+		},
+		{
+		  "pattern": "analyze",
+		  "name": "analyze",
+		  "target": "analyze"
+		 }
+	  ],
+	  "targets": {
+	  	"overview": {
+		  "viewID": "overview",
+		  "viewName": "overview"
+		},
+		"productdetails": {
+		  "viewId": "productdetails",
+		  "viewName": "productdetails"
+		},
+		"supplierdetails": {
+		  "viewID": "supplierdetails",
+		  "viewName": "supplierdetails"
+		},
+		"products": {
+		  "viewID": "products",
+		  "viewName": "products"
+		},
+		"restocking": {
+		  "viewId": "restocking",
+		  "viewName": "restocking"
+		},
+		"analyze": {
+		  "viewID": "analyze",
+		  "viewName": "analyze",
+		  "transition": "flip"
+		}
+	  }
+	},
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    }
+    
+  }
+}

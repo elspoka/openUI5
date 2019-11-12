@@ -1,0 +1,41 @@
+<mvc:View
+	controllerName="sap.ui.santaclaus.controller.supplierDetails"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page id="supplierdetails"
+		title="{i18n>supDet}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<List width="auto"
+			headerText="{suppliers>Name}" >
+			
+			<InputListItem label="{i18n>supplierIDTAG}" >
+			
+			<Input
+				placeholder="{i18n>supplierIDTAG}"
+				value="{suppliers>ID}" />
+			</InputListItem>
+			<InputListItem label="{i18n>supplierNameTAG}">
+			<Input
+				placeholder="{i18n>supplierNameTAG}"
+				value="{suppliers>Name}" />
+			</InputListItem>
+			<InputListItem label="{i18n>supplierPhoneTAG}">
+			<Input
+				placeholder="{i18n>supplierPhoneTAG}"
+				value="{suppliers>Phone}" />
+			</InputListItem>
+			<InputListItem label="{i18n>supplierEmailTAG}">
+			<Input
+				placeholder="{i18n>supplierEmailTAG}"
+				value="{suppliers>Email}" />
+			</InputListItem>
+			
+		</List>
+		<Button class="sapUiSmallMargin" type="Emphasized" icon="sap-icon://edit" text="Click to Edit" press="onClickDummy"/>
+		<Button class="sapUiSmallMargin" type="Accept" icon="sap-icon://save" text="Click to Save" press="onClickDummy"/>
+		<Button class="sapUiSmallMargin" type="Reject"  icon="sap-icon://arrow-left" text="Click to Escape" press="onNavBack"/>
+		<Button class="sapUiSmallMargin"   icon="sap-icon://paper-plane" text="Restore Data" press="onClickToRestoreData"/>
+		</Page>
+		
+</mvc:View>

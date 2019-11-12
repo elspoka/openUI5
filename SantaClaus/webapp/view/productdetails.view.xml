@@ -1,0 +1,41 @@
+<mvc:View
+	controllerName="sap.ui.santaclaus.controller.productDetails"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page id="productdetails"
+		title="{i18n>detailPageTitle}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+		<content>
+		<ObjectHeader
+			title="Product Details"
+			intro="{products>SupplierName}"/>
+		
+		
+			<Bar>
+				<contentRight>
+					<Button id="edit" text="Edit" enabled="true" press="handleEditPress" />
+					<Button id="save" text="Save" type="Emphasized" visible="true" press="handleSavePress" />
+					<Button id="cancel" text="Cancel" visible="true" press="handleCancelPress" />
+				</contentRight>
+			</Bar>
+	
+    
+	              	
+     <ObjectListItem
+			title="{products>Description} - Supplied by {products>SupplierName}"
+			icon="./{products>ImageUrl}"
+			iconDensityAware="false"
+		    type="Active" >
+		    	<attributes>
+					<ObjectAttribute text=" Name of product: {products>Name}" />
+					<ObjectAttribute text=" Category of product: {products>MainCategoryId}" />
+					<ObjectAttribute text=" Weight in: {products>WeightMeasure} kg" />
+					
+					</attributes>
+				</ObjectListItem>
+	
+	     
+   </content>
+   </Page>
+</mvc:View>

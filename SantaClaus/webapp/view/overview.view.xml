@@ -1,0 +1,49 @@
+<core:View
+   controllerName="sap.ui.santaclaus.controller.overview"
+   xmlns:core="sap.ui.core"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns="sap.m"
+   displayBlock="true">
+   <App> 
+   	<pages> 
+   	   <Page title="{i18n>homePageTitle}" >
+   	   
+   	     <headerContent>
+			 
+   	     </headerContent>
+   	     <content>
+   	      <FlexBox justifyContent="Center">
+   	     	<Button
+   	     	      icon="sap-icon://sys-first-page"
+   	     		  id="main_pro_button"
+			      text="Manage your Products"
+			      width="90%"
+			      class="sapUiSmallMargin"
+				  press="onNavToProducts"
+				  type="Emphasized"/>
+			 <Button
+			      icon="sap-icon://activities"
+			      id="main_re_button"
+			      text="View Restocking Suggestions"
+			      width="90%"
+			      class="sapUiSmallMargin"
+				  press="onNavToRestocking"
+				  type="Accept"/>
+			 <Button
+			      icon="sap-icon://add-activity-2"
+			      id="main_an_button"
+			      text="Analyze Sales Trends"
+			      width="90%"
+			      class="sapUiSmallMargin"
+				  press="onNavToAnalyze"
+				  type="Reject"/>
+    	     	 </FlexBox> 
+   	     </content>
+   	     	
+			
+   	     
+   	    </Page>
+   	</pages>
+   </App>
+   
+</core:View>

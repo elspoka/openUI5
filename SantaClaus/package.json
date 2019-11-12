@@ -1,0 +1,29 @@
+{
+  "name": "santaclaus",
+  "version": "0.2.0",
+  "description": "Santa Claus app",
+  "private": true,
+  "scripts": {
+    "start": "ui5 serve",
+    "lint": "eslint WebContent",
+    "karma": "karma start",
+    "karma-ci": "rimraf coverage && karma start karma-ci.conf.js",
+    "watch": "npm run karma",
+    "test": "npm run lint && npm run karma-ci",
+    "build": "ui5 build -a --clean-dest",
+    "build-self-contained": "ui5 build self-contained -a --clean-dest",
+    "serve-dist": "ws --compress -d dist"
+  },
+  "dependencies": {
+    "@openui5/sap.m": "^1.71.3",
+    "@openui5/sap.ui.core": "^1.71.3",
+    "@openui5/themelib_sap_fiori_3": "^1.71.3"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^1.12.0",
+    "eslint": "^6.6.0"
+  },
+  "main": "karma-ci.conf.js",
+  "author": "",
+  "license": "ISC"
+}
