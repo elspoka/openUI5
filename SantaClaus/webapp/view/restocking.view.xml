@@ -15,7 +15,7 @@
       width="auto"
       
       items="{
-         path : 'suppliers>/Suppliers',
+         path : 'suppliers>/',
          sorter : {
             path : 'Name',
 				group : false 

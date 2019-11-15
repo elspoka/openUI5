@@ -15,10 +15,11 @@
       class="sapUiResponsiveMargin"
       width="auto"
       items="{
-      path : 'products>#/Products',
+		 path : 'products>/',
        sorter : {
             path : 'Name',
 				group : false}
+      
       }" >
       <items>
       
