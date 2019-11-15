@@ -16,7 +16,7 @@ sap.ui.define([
 	         
 	         $.ajax({
 	     		dataType: "json",
-	     		url: "https://p5ld5.mocklab.io/suppliersList",
+	     		url: "https://api.backendless.com/2CF53ABC-39A6-B0FE-FFCF-D90B34DC5E00/B508D603-A943-E97E-FF7E-936F9CBF7B00/data/Suppliers",
 	     		type: "GET",
 	     		success: function( oData, textStatus, xhr ) {
 

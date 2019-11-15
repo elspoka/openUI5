@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start": "ui5 serve",
-    "lint": "eslint WebContent",
+    "lint": "eslint webapp",
     "karma": "karma start",
     "karma-ci": "rimraf coverage && karma start karma-ci.conf.js",
     "watch": "npm run karma",

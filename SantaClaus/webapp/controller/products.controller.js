@@ -6,7 +6,7 @@ sap.ui.define([
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
 	 "sap/ui/core/UIComponent"
-], function (Controller,jquery, JSONModel, History , Filter, FilterOperator,UIComponent) {
+], function (Controller, jquery, JSONModel, History , Filter, FilterOperator, UIComponent) {
 	"use strict";
 		
 	return Controller.extend("sap.ui.santaclaus.controller.products", {

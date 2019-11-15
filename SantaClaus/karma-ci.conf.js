@@ -5,7 +5,7 @@ module.exports = function(config) {
 	config.set({
 
 		preprocessors: {
-			"{WebContent,WebContent/!(test)}/*.js": ["coverage"]
+			"{webapp,webapp/!(test)}/*.js": ["coverage"]
 		},
 
 		coverageReporter: {
