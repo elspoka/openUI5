@@ -44,7 +44,7 @@ sap.ui.define([
 				var oItem = oEvent.getSource();
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("productdetails", {
-					productPath: oItem.getBindingContext("products").getPath().substr(10)
+					productPath: oItem.getBindingContext("products").getPath().substr(1)
 				});
 			},
 			

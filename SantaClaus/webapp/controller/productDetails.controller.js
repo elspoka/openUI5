@@ -17,7 +17,7 @@ sap.ui.define([
 					},
 		_onObjectMatched: function (oEvent) {
 			this.getView().bindElement({
-				path: "/Products/" + oEvent.getParameter("arguments").productPath,
+				path: "/" + oEvent.getParameter("arguments").productPath,
 				model: "products"
 			});
 			
